@@ -1,0 +1,216 @@
+:root {
+  --dark: #19283f;
+  --green: #33d1cc;
+  --red: #ff3150;
+  --yellow: #ffc400;
+  --section: #eff7fa;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.main-btn {
+  background-color: var(--red);
+  color: var(--yellow);
+  padding: 0.5rem 1rem;
+}
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--green);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Start Navbar */
+.navbar {
+  background-color: var(--dark);
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green);
+}
+.navbar .search {
+  border-left: 1px solid var(--green);
+  svg {
+    color: var(--green);
+  }
+}
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+@media (max-width: 767px) {
+  .navbar .navbar-toggler {
+    font-size: 15px;
+  }
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green);
+}
+.navbar-collapse {
+  padding: 5px 10px;
+}
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: rgba(13, 110, 253, 0.25);
+  }
+}
+/* End Navbar */
+/* Start Landing */
+.landing {
+  background-color: var(--dark);
+  min-height: calc(100vh - 72px);
+}
+/* End Landing */
+/* Start Features */
+.features .icon-holder {
+  height: 200px;
+  svg {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .number {
+    font-size: 12rem;
+    color: var(--section);
+  }
+  .icon {
+    color: var(--green);
+  }
+}
+.features .feat h4 {
+  color: var(--yellow);
+}
+/* End Features */
+/* Start our work */
+.ourwork {
+  background-color: var(--section);
+}
+.ourwork ul li {
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media (max-width: 567px) {
+  .ourwork ul li {
+    padding: 0.5rem;
+    font-size: 16px;
+  }
+}
+.ourwork ul .active {
+  color: var(--yellow);
+  background-color: var(--red);
+}
+.ourwork ul li:not(.active):hover {
+  color: var(--red);
+}
+.ourwork .box {
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+}
+.ourwork .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgb(51 209 204 / 76%);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  transform: translateX(calc(-100% - 5px));
+}
+.ourwork .box:hover::before {
+  transform: translateX(0);
+}
+/* End our work */
+/* Start Stuff */
+.stuff .description {
+  max-width: 500px;
+}
+/* Start Stuff */
+/* Start Our Team */
+.our-team {
+  background-color: var(--section);
+}
+.our-team .title h2 {
+  color: var(--yellow);
+}
+.our-team .box h4 {
+  background-color: var(--green);
+}
+/* End Our Team */
+/* Start Project */
+.project {
+  background-color: var(--dark);
+}
+/* End Project */
+/* Start Subscribe */
+.subscribe {
+  background-color: var(--yellow);
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe ::placeholder {
+  color: white;
+}
+.subscribe input[type="submit"] {
+  background-color: var(--dark);
+  color: var(--yellow);
+}
+/* End Subscribe */
+/* Start Footer  */
+footer {
+  background-color: var(--dark);
+}
+footer .box .copyright > span {
+  color: var(--green);
+  font-weight: bold;
+}
+footer .box .copyright > div span {
+  color: var(--yellow);
+  font-weight: bold;
+}
+footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+footer .facebook {
+  background-color: #1877f2;
+}
+footer .twitter {
+  background-color: #1da1f2;
+}
+footer .linkedin {
+  background-color: #0077b5;
+}
+footer .youtube {
+  background-color: #ff0000;
+}
+/* End Footer  */
+/* media queries */
+.pt-5 {
+  padding-top: 1.5rem !important;
+}
+.mt-5 {
+  padding-top: 1.5rem !important;
+}
